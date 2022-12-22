@@ -23,7 +23,8 @@ url = f"https://api.esios.ree.es/indicators/{code}"
 headers = {'Accept':'application/json; application/vnd.esios-api-v2+json',
            'Content-Type':'application/json',
            'Host':'api.esios.ree.es',
-           'Authorization':'Token token=' + TOKEN}
+           'x-api-key': TOKEN,
+           }
 
 response = requests.get(url, headers=headers)
 
